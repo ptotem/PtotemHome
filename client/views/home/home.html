@@ -1,0 +1,89 @@
+<!-- The home page templates -->
+
+<!------------------------------------------------------------------------------------------------->
+<!-- The Page Master-->
+<!------------------------------------------------------------------------------------------------->
+<template name="home">
+    <div class="row-fluid">
+        <div class="col-lg-3">
+            {{>logo}}
+        </div>
+        <div class="col-lg-9">
+            <div class="row-fluid">
+                <div class="sections" style="cursor: pointer">
+                    {{>introButton}}
+                </div>
+            </div>
+        </div>
+    </div>
+</template>
+
+<!------------------------------------------------------------------------------------------------->
+<!-- The Menu Buttons -->
+<!------------------------------------------------------------------------------------------------->
+
+<template name="logo">
+    <br>
+    <div class="row-fluid">
+        <img src="/sprites/logo.png" alt="Ptotem - A Serious Gaming Company"
+             class="col-lg-12 col-md-12 col-sm-12 col-xs-12"/>
+        <h4 class="pull-right" style="margin-top: -10px;">do it with games...</h4>
+    </div>
+</template>
+
+<template name="introButton">
+    {{#with title "Serious Gaming" "A new approach to learning and communication" "red"}}
+        {{>homeButton}}
+    {{/with}}
+</template>
+
+<template name="homeButton">
+    <a href="#" class="{{color}} homeButton col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <h4>{{name}}</h4>
+        <span>{{summary}}</span>
+    </a>
+</template>
+
+<template name="homePanel">
+    <div class="row-fluid"
+         style="padding-top: 20px;padding-bottom: 20px;height: 350px;background: #333333 url('/assets/blackbackground.jpg') repeat">
+        <div class="row-fluid" style="margin-left: 30px;">
+            <h1 style="border-bottom: 1px solid white; width:60%;color:white;padding-bottom: 10px;">
+                QuickStart
+            </h1>
+        </div>
+        <div class="row-fluid" style="margin-left: 30px;height: 250px;">
+            <div class="span4 red" style="color:white;height:100%; padding:20px;font-size:80px;line-height: 70px;">
+                <br>
+                start <br> here
+            </div>
+            <div class="span6" style="color:white;">
+                If you are a new seller on the eBay platform, this is where you start. We will give you a quick
+                introduction
+                on what makes eBay your preferred marketplace and what you can expect from the experience.
+                <br>
+                <br>
+                We will take you through the basic processes that you would need to understand as a seller and give you
+                a
+                clear idea on the costs of using the platform. And finally, we will start you off with some quick tips
+                on
+                what
+                you can do to become a successful seller on eBay.
+                <br>
+                <br>
+                <%= link_to "Back", "#", class: "btn btn-large btn-inverse pull-left main_back" %>
+                <%= link_to "Go", @quick_starter, class: "btn btn-success btn-large pull-right" %>
+
+            </div>
+        </div>
+    </div>
+</template>
+<template name="casePanel">
+
+</template>
+<template name="blogPanel">
+
+</template>
+<template name="aboutPanel">
+
+</template>

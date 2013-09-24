@@ -1,0 +1,15 @@
+<template name="squaredText">
+    <div style="height:100%;width:80%;margin-left: 10%">
+        {{#each lines name}}
+            <span class="hsjs" style="line-height: 0.9">{{line}}</span>
+        {{/each}}
+    </div>
+</template>
+
+<template name="fittedText">
+    <div style="height:100%;width:80%;margin-left: 10%">
+        <div class='fitSpan'>
+            {{name}}
+        </div>
+    </div>
+</template>
